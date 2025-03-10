@@ -1,0 +1,44 @@
+U1 = 0, U2 = 0
+=========================================
+============ITERATION 1==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+X_values = [1, 1, 0, 0]
+sub_obj_val = 26
+Upper_bound = 26
+Cut Added to Master Problem: theta + 2U1 + 0U2 >= 26
+SOLVING MASTER PROBLEM
+Master Problem Solution Status: Unknown
+theta_var = 0
+U1 = 13, U2 = 0
+Lower_bound = 13
+=========================================
+============ITERATION 2==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+X_values = [0, 0, 0, 1]
+sub_obj_val = 4
+Upper_bound = 17
+Cut Added to Master Problem: theta + 0U1 + 1U2 >= 4
+SOLVING MASTER PROBLEM
+Master Problem Solution Status: Optimal
+theta_var = 4
+U1 = 11, U2 = 0
+Lower_bound = 15
+=========================================
+============ITERATION 3==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+X_values = [1, 0, 0, 0]
+sub_obj_val = 5
+Upper_bound = 16
+Cut Added to Master Problem: theta + 1U1 + 0U2 >= 16
+SOLVING MASTER PROBLEM
+Master Problem Solution Status: Optimal
+theta_var = 4
+U1 = 12, U2 = 0
+Lower_bound = 16
+
+C:\Users\laluv\OneDrive - Indian Institute of Management Ahmedabad\Desktop\Git\Repos\Lagrangian-Relaxation\x64\Debug\Lagrangian-Relaxation.exe (process 14820) exited with code 0 (0x0).
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .
