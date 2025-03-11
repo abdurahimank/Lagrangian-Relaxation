@@ -1,0 +1,125 @@
+U1 = 0, U2 = 0
+=========================================
+============ITERATION 1==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: [0, 0]
+X_values = [1, 1, 0, 0]
+Upper_bound = 26
+Lower_bound = 26
+Gap = 0
+Step Size: 6
+=========================================
+============ITERATION 2==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: [6, 0]
+X_values = [1, 1, 0, 0]
+Upper_bound = 20
+Lower_bound = 26
+Gap = -6
+Step Size: 3
+=========================================
+============ITERATION 3==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: [9, 6]
+X_values = [1, 1, 0, 0]
+Upper_bound = 20
+Lower_bound = 26
+Gap = -6
+Step Size: 1.5
+=========================================
+============ITERATION 4==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: [10.5, 9]
+X_values = [1, 0, 0, 0]
+Upper_bound = 20
+Lower_bound = 16
+Gap = 4
+Step Size: 0.75
+=========================================
+============ITERATION 5==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: [10.5, 9.75]
+X_values = [1, 0, 0, 0]
+Upper_bound = 20
+Lower_bound = 16
+Gap = 4
+Step Size: 0.375
+=========================================
+============ITERATION 6==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: [10.5, 10.125]
+X_values = [1, 0, 0, 0]
+Upper_bound = 20
+Lower_bound = 16
+Gap = 4
+Step Size: 0.1875
+=========================================
+============ITERATION 7==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: [10.5, 10.3125]
+X_values = [1, 0, 0, 0]
+Upper_bound = 20
+Lower_bound = 16
+Gap = 4
+Step Size: 0.09375
+=========================================
+============ITERATION 8==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: [10.5, 10.4062]
+X_values = [1, 0, 0, 0]
+Upper_bound = 20
+Lower_bound = 16
+Gap = 4
+Step Size: 0.046875
+=========================================
+============ITERATION 9==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: [10.5, 10.4531]
+X_values = [1, 0, 0, 0]
+Upper_bound = 20
+Lower_bound = 16
+Gap = 4
+Step Size: 0.0234375
+=========================================
+============ITERATION 10==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: [10.5, 10.4766]
+X_values = [1, 0, 0, 0]
+Upper_bound = 20
+Lower_bound = 16
+Gap = 4
+Step Size: 0.0117188
+=========================================
+============ITERATION 11==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: [10.5, 10.4883]
+X_values = [1, 0, 0, 0]
+Upper_bound = 20
+Lower_bound = 16
+Gap = 4
+Step Size: 0.00585938
+=========================================
+============ITERATION 12==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: [10.5, 10.4941]
+X_values = [1, 0, 0, 0]
+Upper_bound = 20
+Lower_bound = 16
+Gap = 4
+Step Size: 0.00292969
+
+C:\Users\laluv\OneDrive - Indian Institute of Management Ahmedabad\Desktop\Git\Repos\Lagrangian-Relaxation\x64\Debug\Lagrangian-Relaxation.exe (process 14020) exited with code 0 (0x0).
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .

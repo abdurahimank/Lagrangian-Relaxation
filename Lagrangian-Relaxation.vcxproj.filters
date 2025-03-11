@@ -20,7 +20,12 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Cutting_Plane_1.txt" />
-    <Text Include="Cutting_Plane_2.txt" />
+    <Text Include="Cutting_Plane_1 Constrain.txt" />
+    <Text Include="Cutting_Plane_2 Constrain.txt" />
+    <Text Include="Subgradient_1 Constrain.txt" />
+    <Text Include="Subgradient_2 Constrain.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
   </ItemGroup>
 </Project>

@@ -8,7 +8,7 @@
  * 𝑥𝑗 ∈ {0, 1}, j=1, 2, 3, 4
  ***********************************************************************************/
 
- ////USING CUTTING PLANE METHOD////
+ ////USING CUTTING PLANE METHOD - RELAXING TWO VARIABLE////
 
 #pragma warning(disable : 4996) //For Visual Studio 2012
 #include <stdio.h>
@@ -83,10 +83,14 @@ int main(int argc, char** argv)
 		IloNum Lower_bound = 0;
 		GAP = Upper_bound - Lower_bound;
 		cout << "U1 = " << U_val[0] << ", U2 = " << U_val[1] << endl;
-		IloInt Iter = 0;
+		IloNum Iter = 0;
+		IloNum	step_size = 6;
+		IloNum step_size_gap = 1;
 
 		//while( Iter < MaxCut )
-		while (Upper_bound - Lower_bound > eps)
+		while (step_size_gap > 0.002)
+		//while (GAP > 1)
+		//while (Upper_bound - Lower_bound > eps)
 		{
 			Iter++;
 			cout << "=========================================" << endl;
@@ -102,32 +106,60 @@ int main(int argc, char** argv)
 			cout << "Sub Problem Solution Status: " << cplex_sub.getCplexStatus() << endl;
 			if (cplex_sub.getCplexStatus() == CPX_STAT_OPTIMAL)
 			{// Dual subproblem is bounded; Add Optimality Cut to the Master Problem
+				cout << "U: " << U_val << endl;
+
 				cplex_sub.getValues(X_val, X);  // taking values of X from SP and saves to X_val
 				cout << "X_values = " << X_val << endl;
-				sub_obj_val = cplex_sub.getObjValue();
-				cout << "sub_obj_val = " << sub_obj_val << endl;
-				Upper_bound = IloMin(Upper_bound, (U_val[0] + U_val[1] + sub_obj_val));
-				cout << "Upper_bound = " << Upper_bound << endl;
+				//sub_obj_val = cplex_sub.getObjValue();
+				//cout << "sub_obj_val = " << sub_obj_val << endl;
+				//Upper_bound = IloMin(Upper_bound, (10 * U_val + sub_obj_val));
+				//cout << "Upper_bound = " << Upper_bound << endl;
 
 				//Add Cut to the Master Problem
-				cout << "Cut Added to Master Problem: " << "theta + " << (X_val[0] + X_val[1]) << "U1 + " << (X_val[2] + X_val[3]) << "U2 >= " << 16 * X_val[0] + 10 * X_val[1] + 4 * X_val[3] << endl;
-				model_master.add(theta_var + (X_val[0] + X_val[1]) * U[0] + (X_val[2] + X_val[3]) * U[1] >= (16 * X_val[0] + 10 * X_val[1] + 4 * X_val[3]));
+				//cout << "Cut Added to Master Problem: " << "theta + " << (8 * X_val[0] + 2 * X_val[1] + X_val[2] + 4 * X_val[3]) << " U >= " << 16 * X_val[0] + 10 * X_val[1] + 4 * X_val[3] << endl;
+				//model_master.add(theta_var + (8 * X_val[0] + 2 * X_val[1] + X_val[2] + 4 * X_val[3]) * U >= (16 * X_val[0] + 10 * X_val[1] + 4 * X_val[3]));
+
+				Upper_bound = IloMin(Upper_bound, ((U_val[0] + U_val[1]) + (16 - U_val[0]) * X_val[0] + (10 - U_val[0]) * X_val[1] + (0 - U_val[1]) * X_val[2] + (4 - U_val[1]) * X_val[3]));
+				cout << "Upper_bound = " << Upper_bound << endl;
+
+				Lower_bound = 16 * X_val[0] + 10 * X_val[1] + 4 * X_val[3];
+				cout << "Lower_bound = " << Lower_bound << endl;
+
+				GAP = Upper_bound - Lower_bound;
+				cout << "Gap = " << GAP << endl;
+
+
+
 			}
-			cout << "SOLVING MASTER PROBLEM" << endl;
-			cout << "Master Problem Solution Status: " << cplex_master.getCplexStatus() << endl;
-			cplex_master.extract(model_master);
-			if (!cplex_master.solve())
-			{
-				cout << "Failed" << endl;
-				throw(-1);
-			}
-			U_val[0] = cplex_master.getValue(U[0]);
-			U_val[1] = cplex_master.getValue(U[1]);
-			theta_val = cplex_master.getValue(theta_var);
-			cout << "theta_var = " << theta_val << endl;
-			cout << "U1 = " << U_val[0] << ", U2 = " << U_val[1] << endl;
-			Lower_bound = U_val[0] + U_val[1] + theta_val;
-			cout << "Lower_bound = " << Lower_bound << endl;
+			U_val[0] = IloMax(0, (U_val[0] - (step_size * (1 - X_val[0] - X_val[1]))));
+			U_val[1] = IloMax(0, (U_val[0] - (step_size * (1 - X_val[2] - X_val[3]))));
+
+
+			cout << "Step Size: " << step_size << endl;
+			step_size_gap = step_size - (step_size / 2);
+			step_size = step_size / 2;
+
+			//if (Iter != 1) {
+			//	step_size_gap = step_size - (1 / Iter);
+			//	step_size = 1 / Iter;
+			//}
+
+
+
+			//cout << "SOLVING MASTER PROBLEM" << endl;
+			//cout << "Master Problem Solution Status: " << cplex_master.getCplexStatus() << endl;
+			//cplex_master.extract(model_master);
+			//if (!cplex_master.solve())
+			//{
+			//	cout << "Failed" << endl;
+			//	throw(-1);
+			//}
+			//U_val = cplex_master.getValue(U);
+			//theta_val = cplex_master.getValue(theta_var);
+			//cout << "theta_var = " << theta_val << endl;
+			//cout << "U = " << U_val << endl;
+			//Lower_bound = 10 * U_val + theta_val;
+			//cout << "Lower_bound = " << Lower_bound << endl;
 		}//while(Upper_bound - Lower_bound > eps)
 		model_master.end();
 		model_sub.end();

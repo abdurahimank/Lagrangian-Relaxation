@@ -1,0 +1,68 @@
+U = 0
+=========================================
+============ITERATION 1==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 0
+X_values = [1, 0, 0, 1]
+Upper_bound = 20
+Lower_bound = 20
+Gap = 0
+=========================================
+============ITERATION 2==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 2
+X_values = [0, 1, 0, 0]
+Upper_bound = 26
+Lower_bound = 10
+Gap = 16
+=========================================
+============ITERATION 3==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 0
+X_values = [1, 0, 0, 1]
+Upper_bound = 20
+Lower_bound = 20
+Gap = 0
+=========================================
+============ITERATION 4==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 1
+X_values = [1, 0, 0, 1]
+Upper_bound = 18
+Lower_bound = 20
+Gap = -2
+=========================================
+============ITERATION 5==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 1.33333
+X_values = [0, 1, 0, 0]
+Upper_bound = 20.6667
+Lower_bound = 10
+Gap = 10.6667
+=========================================
+============ITERATION 6==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 1
+X_values = [0, 1, 0, 0]
+Upper_bound = 18
+Lower_bound = 10
+Gap = 8
+=========================================
+============ITERATION 7==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 0.933333
+X_values = [1, 0, 0, 1]
+Upper_bound = 18.1333
+Lower_bound = 20
+Gap = -1.86667
+
+C:\Users\laluv\OneDrive - Indian Institute of Management Ahmedabad\Desktop\Git\Repos\Lagrangian-Relaxation\x64\Debug\Lagrangian-Relaxation.exe (process 27636) exited with code 0 (0x0).
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .

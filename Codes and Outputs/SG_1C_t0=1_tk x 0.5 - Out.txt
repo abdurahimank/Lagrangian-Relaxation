@@ -1,0 +1,86 @@
+U = 0
+=========================================
+============ITERATION 1==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 0
+X_values = [1, 0, 0, 1]
+Upper_bound = 20
+Lower_bound = 20
+Gap = 0
+=========================================
+============ITERATION 2==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 2
+X_values = [0, 1, 0, 0]
+Upper_bound = 26
+Lower_bound = 10
+Gap = 16
+=========================================
+============ITERATION 3==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 0
+X_values = [1, 0, 0, 1]
+Upper_bound = 20
+Lower_bound = 20
+Gap = 0
+=========================================
+============ITERATION 4==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 0.5
+X_values = [1, 0, 0, 1]
+Upper_bound = 19
+Lower_bound = 20
+Gap = -1
+=========================================
+============ITERATION 5==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 0.75
+X_values = [1, 0, 0, 1]
+Upper_bound = 18.5
+Lower_bound = 20
+Gap = -1.5
+=========================================
+============ITERATION 6==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 0.875
+X_values = [1, 0, 0, 1]
+Upper_bound = 18.25
+Lower_bound = 20
+Gap = -1.75
+=========================================
+============ITERATION 7==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 0.9375
+X_values = [1, 0, 0, 1]
+Upper_bound = 18.125
+Lower_bound = 20
+Gap = -1.875
+=========================================
+============ITERATION 8==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 0.96875
+X_values = [1, 0, 0, 1]
+Upper_bound = 18.0625
+Lower_bound = 20
+Gap = -1.9375
+=========================================
+============ITERATION 9==============
+SOLVING SUB PROBLEM
+Sub Problem Solution Status: Optimal
+U: 0.984375
+X_values = [1, 0, 0, 1]
+Upper_bound = 18.0312
+Lower_bound = 20
+Gap = -1.96875
+
+C:\Users\laluv\OneDrive - Indian Institute of Management Ahmedabad\Desktop\Git\Repos\Lagrangian-Relaxation\x64\Debug\Lagrangian-Relaxation.exe (process 22664) exited with code 0 (0x0).
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .
